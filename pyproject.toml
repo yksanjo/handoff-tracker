@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "handoff-tracker"
+version = "0.1.0"
+description = "Track ownership and handoffs between collaborating agents"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+handoff-tracker = "handoff_tracker.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
